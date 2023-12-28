@@ -2,7 +2,7 @@ package com.example.models
 
 import java.util.Date
 
-data class GitModel(val type: String, val payload: Payload, val created_at: Date, val repo: Repo)
+data class GitEventModel(val type: String, val payload: Payload, val created_at: Date, var created_at_str: String?, val repo: Repo)
 
 data class Payload(val repository_id: Int, val push_id: Long, val size: Int, val before: String?, val head: String?, val commits: List<Commit>?)
 
